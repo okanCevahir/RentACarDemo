@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "AddCaar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model EntityLayer.Car
+<h3>Araç Ekleme</h3>
+
+    <br />
+    @using (Html.BeginForm("AddCaar", "Car", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label("Marka")
+            @Html.TextBoxFor(x=>x.Marka, new{@class="form-control"})
+            
+            <br />
+            <br />
+            
+            @Html.Label("Model")
+            @Html.TextAreaFor(x=>x.Model, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("Yakıt")
+            @Html.TextAreaFor(x=>x.Yakit, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("Vites")
+            @Html.TextAreaFor(x=>x.Vites, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("KM")
+            @Html.TextAreaFor(x=>x.Km, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("Renk")
+            @Html.TextAreaFor(x=>x.Renk, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("Görsel Linki")
+            @Html.TextAreaFor(x=>x.Image, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            @Html.Label("yıl")
+            @Html.TextAreaFor(x=>x.Yil, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+            
+            
+            @Html.Label("Fiyatı")
+            @Html.TextAreaFor(x=>x.Price, new{@class="form-control"})
+            
+            <br />
+            <br />
+            <br />
+           
+            <button class="btn btn-info">kaydet</button>
+        </div>
+    }
+
